@@ -7,7 +7,6 @@ import wget
 import os
 from PIL import Image
 from pyrogram.errors import UserNotParticipant, UserBannedInChannel
-AUTH_USERS = set(int(x) for x in os.environ.get("AUTH_USERS", "1248974748 1401477467").split())
 
     
 ytregex = r"^((?:https?:)?\/\/)?((?:www|m)\.)?((?:youtube\.com|youtu.be))(\/(?:[\w\-]+\?v=|embed\/|v\/)?)([\w\-]+)(\S+)?$"
@@ -38,7 +37,7 @@ async def ytdl(bot, message):
         await message.reply_text("`Failed To Fetch Youtube Data... 😔 \nPossible Youtube Blocked server ip \n#error`")
         return
     buttons = InlineKeyboardMarkup(list(create_buttons(formats)))
-    sentm = await message.reply_text("Processing Youtube Url 🔎 🔎 🔎")
+    sentm = await message.reply_text("ՏᗴᗩᖇᑕᕼIᑎᘜ ᗰᑌՏIᑕ ....")
     try:
         # Todo add webp image support in thumbnail by default not supported by pyrogram
         # https://www.youtube.com/watch?v=lTTajzrSkCw
