@@ -25,11 +25,11 @@ async def catch_youtube_fmtid(c, m):
         print(media_type)
         if media_type == 'audio':
             buttons = InlineKeyboardMarkup([[InlineKeyboardButton(
-                "🚀 Download now 🍀", callback_data=f"{media_type}||{format_id}||{yturl}")]])
+                "🚀   Download now   🍀", callback_data=f"{media_type}||{format_id}||{yturl}")]])
                                                                                                     
         else:
             buttons = InlineKeyboardMarkup([[InlineKeyboardButton(
-                "🚀 Download now 🍀", callback_data=f"{media_type}||{format_id}||{yturl}")]])
+                "🚀   Download now   🍀", callback_data=f"{media_type}||{format_id}||{yturl}")]])
                                                                                                     
 
         await m.edit_message_reply_markup(buttons)
@@ -107,7 +107,7 @@ async def catch_youtube_dldata(c, q):
             media=filename,
             thumb=thumb_image_path,
             caption=os.path.basename(filename),
-            title=os.path.basename(filename) + f"\n\n© @TG_Utubebot"
+            title=os.path.basename(filename) + f"\n\n ◇───────────────◇ \n\n🍀 uploaded by : [🎧 ᗰIᑌՏIᑕ ᖴIᑎᗪᗴᖇ ᗷOT 🎧](https://t.me/NIKONMUSICEFINDERbot)\n\n🔥 [nikoneDevelopers ✪](https://t.me/nikoneDevelopers) \n\n ◇───────────────◇"
         )
 
     if cb_data.startswith("video"):
@@ -119,7 +119,7 @@ async def catch_youtube_dldata(c, q):
             width=width,
             height=height,
             thumb=thumb_image_path,
-            caption=os.path.basename(filename) + f"\n\n© @TG_Utubebot",
+            caption=os.path.basename(filename) + f"\n\n ◇───────────────◇ \n\n🍀 uploaded by : [🎧 ᗰIᑌՏIᑕ ᖴIᑎᗪᗴᖇ ᗷOT 🎧](https://t.me/NIKONMUSICEFINDERbot)\n\n🔥 [nikoneDevelopers ✪](https://t.me/nikoneDevelopers) \n\n ◇───────────────◇",
             supports_streaming=True
         )
 
@@ -128,7 +128,7 @@ async def catch_youtube_dldata(c, q):
         med = InputMediaDocument(
             media=filename,
             thumb=thumb_image_path,
-            caption=os.path.basename(filename) + f"\n\n© @TG_Utubebot",
+            caption=os.path.basename(filename) + f"\n\n ◇───────────────◇ \n\n🍀 uploaded by : [🎧 ᗰIᑌՏIᑕ ᖴIᑎᗪᗴᖇ ᗷOT 🎧](https://t.me/NIKONMUSICEFINDERbot)\n\n🔥 [nikoneDevelopers ✪](https://t.me/nikoneDevelopers) \n\n ◇───────────────◇",
         )
 
     if cb_data.startswith("docvideo"):
@@ -137,7 +137,7 @@ async def catch_youtube_dldata(c, q):
         med = InputMediaDocument(
             media=filename,
             thumb=thumb_image_path,
-            caption=os.path.basename(filename) + f"\n\n© @TG_Utubebot",
+            caption=os.path.basename(filename) + f"\n\n ◇───────────────◇ \n\n🍀 uploaded by : [🎧 ᗰIᑌՏIᑕ ᖴIᑎᗪᗴᖇ ᗷOT 🎧](https://t.me/NIKONMUSICEFINDERbot)\n\n🔥 [nikoneDevelopers ✪](https://t.me/nikoneDevelopers) \n\n ◇───────────────◇",
         )
     if med:
         loop.create_task(send_file(c, q, med, filename))
