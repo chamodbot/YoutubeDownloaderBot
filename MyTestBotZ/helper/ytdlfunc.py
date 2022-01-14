@@ -22,6 +22,10 @@ def buttonmap(item):
         return [InlineKeyboardButton(f"{quality} 🎵 {humanbytes(item['filesize'])}",
                                      callback_data=f"ytdata||audio||{item['format_id']}||{item['yturl']}")]
     
+    else:
+        return [InlineKeyboardButton(f"{quality} 🎵 {humanbytes(item['filesize'])}",
+                                     callback_data=f"ytdata||audio||{item['format_id']}||{item['yturl']}")]
+
 def create_buttons(quailitylist):
     return map(buttonmap, quailitylist)
 
