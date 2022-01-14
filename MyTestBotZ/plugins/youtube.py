@@ -35,7 +35,7 @@ async def ytdl(bot, message):
         await message.reply_text("`Failed To Fetch Youtube Data... 😔 \nPossible Youtube Blocked server ip \n#error`")
         return
     buttons = InlineKeyboardMarkup(list(create_buttons(formats)))
-    sentm = await message.reply_text("ՏᗴᗩᖇᑕᕼIᑎᘜ ᗰᑌՏIᑕ ....")
+    sentm = await message.reply_text("🚀  ՏᗴᗩᖇᑕᕼIᑎᘜ ᗰᑌՏIᑕ ....")
     try:
         # Todo add webp image support in thumbnail by default not supported by pyrogram
         # https://www.youtube.com/watch?v=lTTajzrSkCw
